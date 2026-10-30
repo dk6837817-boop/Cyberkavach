@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBERKAVACH | Intelligent Digital Protection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M24 3L42 10V22C42 33 34 41 24 45C14 41 6 33 6 22V10L24 3Z"
+            stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M16 24L22 30L33 18" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M24 12V17M13 19H18M30 19H35" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h2>CYBERKAVACH</h2>
+        <small>INTELLIGENT DIGITAL PROTECTION</small>
+      </div>
+    </div>
+
+    <p class="nav-heading">MAIN MENU</p>
+    <nav>
+      <a href="#dashboard" class="nav-link active">▦ <span>Dashboard</span></a>
+      <a href="#message-checker" class="nav-link">✉ <span>Message Checker</span></a>
+      <a href="#link-checker" class="nav-link">⌁ <span>Fake Link Checker</span></a>
+      <a href="#alerts" class="nav-link">⚠ <span>Scam Alerts</span></a>
+      <a href="#assistant" class="nav-link">✧ <span>Safety Assistant</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="mini-shield">✓</div>
+      <strong>Stay Protected</strong>
+      <p>Think before you click. Stay safe online.</p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">CYBER SECURITY PLATFORM</span>
+        <h1 id="pageTitle">Security Dashboard</h1>
+      </div>
+      <div class="top-actions">
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="pa">ਪੰਜਾਬੀ</option>
+        </select>
+        <div class="profile">CK</div>
+      </div>
+    </header>
+
+    <section id="dashboard" class="welcome-banner">
+      <div>
+        <span class="banner-label">YOUR DIGITAL SAFETY PARTNER</span>
+        <h2>Welcome to CYBERKAVACH</h2>
+        <p>Think Smart. Stay Protected. Take control of your digital safety.</p>
+        <a href="#message-checker" class="banner-button">Check a Message →</a>
+      </div>
+      <div class="banner-art">
+        <svg viewBox="0 0 150 150" fill="none">
+          <path d="M75 8L128 28V67C128 101 105 127 75 141C45 127 22 101 22 67V28L75 8Z"
+            stroke="currentColor" stroke-width="5"/>
+          <path d="M48 75L67 94L105 54" stroke="currentColor"
+            stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <div class="stat-icon blue">⌕</div>
+        <p>Total Checks</p>
+        <h2 id="totalChecks">0</h2>
+        <small>Messages and links checked</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon red">⚠</div>
+        <p>Warnings Found</p>
+        <h2 id="totalWarnings">0</h2>
+        <small>Potential risks detected</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon green">✓</div>
+        <p>Safe Checks</p>
+        <h2 id="safeChecks">0</h2>
+        <small>No obvious warning signs</small>
+      </article>
+    </section>
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">SECURITY TOOLS</span>
+        <h2>Protect Yourself Online</h2>
+      </div>
+      <span class="live-tag">● DEMO MODE</span>
+    </div>
+
+    <section class="tools-grid">
+      <article class="tool-card" id="message-checker">
+        <div class="tool-title">
+          <div class="tool-icon blue">✉</div>
+          <div>
+            <h3>Scam Message Checker</h3>
+            <p>Identify suspicious messages</p>
+          </div>
+        </div>
+        <label for="messageInput">Paste your SMS or WhatsApp message</label>
+        <textarea id="messageInput" placeholder="Example: Your bank account is blocked. Click here to verify your account..."></textarea>
+        <button class="primary-button" id="checkMessageBtn">Analyse Message →</button>
+        <div id="messageResult" class="result-box" aria-live="polite"></div>
+      </article>
+
+      <article class="tool-card" id="link-checker">
+        <div class="tool-title">
+          <div class="tool-icon purple">⌁</div>
+          <div>
+            <h3>Fake Link Checker</h3>
+            <p>Check suspicious website links</p>
+          </div>
+        </div>
+        <label for="urlInput">Enter website URL</label>
+        <input id="urlInput" type="text" placeholder="https://example.com">
+        <div class="link-note">Never enter your password or OTP on an unknown website.</div>
+        <button class="primary-button" id="checkLinkBtn">Check Website Link →</button>
+        <div id="linkResult" class="result-box" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel" id="alerts">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">ACTIVITY MONITOR</span>
+            <h2>Recent Security Alerts</h2>
+          </div>
+          <button id="clearAlerts" class="text-button">Clear all</button>
+        </div>
+        <div id="alertList" class="alert-list">
+          <div class="empty-state">
+            <span>✓</span>
+            <p>No alerts yet. Your checks will appear here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel assistant-panel" id="assistant">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">SECURITY SUPPORT</span>
+            <h2>Safety Assistant</h2>
+          </div>
+          <span class="online-dot">● Online</span>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+          <div class="bot-message">Hello! I am your CYBERKAVACH Safety Assistant. Ask me about UPI fraud, OTP safety, suspicious links or online scams.</div>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" placeholder="Ask a safety question..." autocomplete="off">
+          <button type="submit" aria-label="Send message">➤</button>
+        </form>
+        <small class="demo-note">Demo assistant • Uses predefined safety guidance</small>
+      </article>
+    </section>
+
+    <footer>
+      <div class="footer-brand">CYBERKAVACH</div>
+      <p>Intelligent Digital Protection · Think Smart. Stay Protected.</p>
+      <small>Educational demo only. Always verify suspicious activity with your bank or official service.</small>
+    </footer>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
